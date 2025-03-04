@@ -1,24 +1,32 @@
 "use client";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import proyectos from "../../../data/proyectos.json";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default function ProyectoPage({ params }: { params: { id: string } }) {
-    const proyecto = proyectos.find((p) => p.id === params.id);
+// Importamos el archivo JSON
+import proyectosData from '../../../data/proyectos.json';
 
-    if (!proyecto) {
-        return notFound(); // Muestra una página 404 si no encuentra el proyecto
+export default function ProyectoPage() {
+  const params = useParams(); // ✅ Get params safely
+  const [id, setId] = useState<string | null>(null);
+  const [proyectoNombre, setProyectoNombre] = useState<string | null>(null);
+
+
+  useEffect(() => {
+    if (params?.id) {
+      const projectId = params.id as string;
+      setId(projectId);
+
+      // Buscar el proyecto en el archivo JSON por id
+      const proyecto = proyectosData.find((p) => p.id === projectId);
+      setProyectoNombre(proyecto ? proyecto.nombre : null); // Si no se encuentra, set null
     }
+  }, [params]);
 
-    return (
-        <div>
-        <h1>{proyecto.nombre}</h1>
-        <p>{proyecto.descripcion}</p>
-        <div className="galeria">
-            {proyecto.imagenes.map((src, index) => (
-            <Image key={index} src={src} alt={`Imagen ${index + 1}`} width={400} height={300} />
-            ))}
-        </div>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Project ID: {id || "Loading..."}</h1>
+      <h2>Project Name: {proyectoNombre || "Loading..."}</h2>
+      {/* Renderiza otros detalles del proyecto aquí */}
+    </div>
+  );
 }
