@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "nombre": "Proyecto 1",
+        "descripcion": "Este es un proyecto de ejemplo.",
+        "imagenes": [
+            "/images/BlacketERFebrero.png",
+            "/images/BlacketERFebrero.png"
+        ]
+    },
+    {
+        "id": "2",
+        "nombre": "Proyecto 2",
+        "descripcion": "Otro proyecto de ejemplo.",
+        "imagenes": [
+            "/images/proyecto2-1.jpg",
+            "/images/proyecto2-2.jpg"
+        ]
+    }
+]
