@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Grid, Card, CardContent, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import ProyectoCard from "../components/ProyectoCard";
 import proyectos from "../../data/proyectos.json";
 
