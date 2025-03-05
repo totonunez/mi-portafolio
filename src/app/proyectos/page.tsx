@@ -1,8 +1,8 @@
 "use client";
 
 import { Typography } from "@mui/material";
-import ProyectoCard from "../components/ProyectoCard";
 import proyectos from "../../data/proyectos.json";
+import ProyectoCard from "../components/ProyectoCard";
 
 export default function ProyectosPage() {
     return (
