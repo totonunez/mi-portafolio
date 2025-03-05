@@ -1,36 +1,37 @@
 // src/components/Contact.tsx
-import React from 'react';
+'use client'
 
-const Contact: React.FC = () => {
-  const buttonStyle = {
-    padding: '10px 20px',
-    margin: '5px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-    backgroundColor: '#f0f0f0',
-    textDecoration: 'none',
-    display: 'inline-block',
-  };
-  const LinkedinStyle = {
-    padding: '10px 20px',
-    margin: '5px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    borderRadius: '5px',
-    border: '1px solid #0077b5', // Color de LinkedIn
-    backgroundColor: '#0077b5', // Color de LinkedIn
-    color: '#fff', // Texto blanco
-    display: 'inline-flex',
-    alignItems: 'center',
-    textDecoration: 'none',
-    transition: 'all 0.3s ease',
-  };
-  const iconStyle = {
-    marginRight: '8px',
-    fontSize: '18px', // Tamaño del ícono
-  };
+const buttonStyle = {
+  padding: '10px 20px',
+  margin: '5px',
+  fontSize: '16px',
+  cursor: 'pointer',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  backgroundColor: '#f0f0f0',
+  textDecoration: 'none',
+  display: 'inline-block',
+};
+const LinkedinStyle = {
+  padding: '10px 20px',
+  margin: '5px',
+  fontSize: '16px',
+  cursor: 'pointer',
+  borderRadius: '5px',
+  border: '1px solid #0077b5', // Color de LinkedIn
+  backgroundColor: '#0077b5', // Color de LinkedIn
+  color: '#fff', // Texto blanco
+  display: 'inline-flex',
+  alignItems: 'center',
+  textDecoration: 'none',
+  transition: 'all 0.3s ease',
+};
+const iconStyle = {
+  marginRight: '8px',
+  fontSize: '18px', // Tamaño del ícono
+};
+
+export default function Contact(){
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -69,6 +70,5 @@ const Contact: React.FC = () => {
       </ul>
     </div>
   );
-};
+}
 
-export default Contact;
