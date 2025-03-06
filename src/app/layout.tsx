@@ -15,11 +15,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      <body>
-        <Navbar/>
-        <Container>{children}</Container>
-        <Footerr></Footerr>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          <Container>{children}</Container>
+        </main>
+        <Footerr />
       </body>
+
     </html>
   );
 }

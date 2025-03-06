@@ -23,10 +23,28 @@ const blogPosts = [
 export default function Home() {
   return (
     <div>
-      <h1>Bienvenido a mi portafolio</h1>
-      <p>Explora mis proyectos</p>
-      <Link href="/proyectos">Ver Proyectos</Link>
-            {/* Sección de Proyectos que se vienen */}
+      <div
+        className="h-screen w-full flex flex-col items-center justify-center text-center bg-cover bg-center relative"
+        style={{ backgroundImage: "url('./images/landinghome.jpg')" }}
+      >
+
+        {/* Contenido */}
+        <div className="relative z-10 text-white px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Bienvenido a mi portafolio
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-6">
+            Explora mis proyectos y descubre mi trabajo
+          </p>
+          <Link
+            href="/proyectos"
+            className="bg-gradient-to-br from-gray-800 via-[#5C4033] to-[#1E3A8A] rounded-2xl shadow-lg p-6 w-8 text-white transform transition duration-300 hover:scale-300"
+          >
+            Ver Proyectos
+          </Link>
+        </div>
+      </div>
+      {/* Sección de Proyectos que se vienen */}
       <Box my={5}>
         <Typography variant="h4" textAlign="center" mb={3}>Proyectos que se vienen</Typography>
         <ul>

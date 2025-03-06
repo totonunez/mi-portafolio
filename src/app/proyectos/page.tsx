@@ -11,11 +11,12 @@ export default function ProyectosPage() {
             Mis Proyectos
         </Typography>
 
-        <div className="grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
         {proyectos.map((proyecto) => (
             <ProyectoCard key={proyecto.id} proyecto={proyecto} />
         ))}
         </div>
+
 
         </div>
     );

@@ -9,8 +9,8 @@ export default function Footer() {
         </Typography>
         <Typography variant="body2">
           Desarrollado por{" "}
-          <Link href="https://tuportafolio.com" color="inherit" underline="hover">
-            Tu Nombre
+          <Link href="https://atreusocean.com" color="inherit" underline="hover">
+            Cristóbal Eduardo Núñez Vera
           </Link>
         </Typography>
       </Container>
