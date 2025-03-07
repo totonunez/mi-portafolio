@@ -1,6 +1,11 @@
 // src/components/Contact.tsx
 'use client'
 import { Typography} from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Contact(){
@@ -34,7 +39,7 @@ export default function Contact(){
               borderRadius: '8px'
             }}
           >
-            <i className="fa fa-linkedin" style={{ marginRight: '10px' }}></i> LinkedIn
+            <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 mr-2" />Linkedin
           </a>
         </li>
         <li>
@@ -55,7 +60,7 @@ export default function Contact(){
               borderRadius: '8px'
             }}
           >
-            GitHub
+            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 mr-2" />Github
           </a>
         </li>
         <li>
@@ -66,12 +71,12 @@ export default function Contact(){
             width: '200px',
             padding: '12px',
             fontSize: '18px',
-            backgroundColor: '#D44638',
+            backgroundColor: '#333',
             color: 'white',
             textDecoration: 'none',
             borderRadius: '8px'
           }}>
-            Correo
+            <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6 mr-2" />Correo
           </a>
         </li>
         <li>
@@ -82,12 +87,12 @@ export default function Contact(){
             width: '200px',
             padding: '12px',
             fontSize: '18px',
-            backgroundColor: '#4CAF50',
+            backgroundColor: '#333',
             color: 'white',
             textDecoration: 'none',
             borderRadius: '8px'
           }}>
-            Teléfono celular
+            <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-2" />Celular
           </a>
         </li>
       </ul>

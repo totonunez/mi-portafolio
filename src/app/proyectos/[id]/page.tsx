@@ -28,9 +28,17 @@ export default function ProyectoPage() {
 
     return (
         <div>
-        <h1>Project ID: {id || "Loading..."}</h1>
-        <h2>Project Name: {proyectoNombre || "Loading..."}</h2>
-        <p>Project Description: {proyectoDescripcion || "Loading..."}</p>
+        <div className=" flex flex-col items-center justify-center text-center">
+            <div className="bg-white shadow-lg rounded-2xl p-8 max-w-xl w-full">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                {proyectoNombre || "Loading..."}
+                </h2>
+            </div>
+        </div>
+        <p className="text-lg text-gray-700 leading-relaxed p-4">
+        {proyectoDescripcion || "Loading..."}
+        </p>
+
              {/* Mostrar todas las imágenes */}
         <div className="galeria">
             {proyectoImagenes?.length ? (

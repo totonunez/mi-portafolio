@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "nombre": "Atreus",
+        "nombre": "Unibag ERP",
         "descripcion": "Este es un proyecto de ejemplo.",
         "imagenes": [
             "/images/BlacketERFebrero.png",
@@ -10,7 +10,25 @@
     },
     {
         "id": "2",
-        "nombre": "Proyecto 2",
+        "nombre": "Dashboard BI Unibag",
+        "descripcion": "Este es un proyecto de ejemplo.",
+        "imagenes": [
+            "/images/BlacketERFebrero.png",
+            "/images/BlacketERFebrero.png"
+        ]
+    },
+    {
+        "id": "3",
+        "nombre": "Comoquiero Spa",
+        "descripcion": "Este es un proyecto de ejemplo.",
+        "imagenes": [
+            "/images/BlacketERFebrero.png",
+            "/images/BlacketERFebrero.png"
+        ]
+    },
+    {
+        "id": "4",
+        "nombre": "Blogs Automáticos de Instagram",
         "descripcion": "Otro proyecto de ejemplo.",
         "imagenes": [
             "/images/proyecto2-1.jpg",
