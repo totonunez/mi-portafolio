@@ -20,13 +20,15 @@ export default function Home() {
         className="h-[70vh] w-full flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-300 via-teal-200 to-green-200 relative"
       >
         {/* Contenido */}
-        <div className="relative z-10 text-white px-6">
+        <div className="relative z-10 px-6" style={{ color: "#000080" }}>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Bienvenido a mi portafolio, <hr /> Cristóbal Núñez Vera
+          !Helloo! Soy Cristóbal Núñez Vera
           </h1>
-          <p className="text-lg md:text-xl text-white mb-6">
-            Explora mis proyectos y descubre mi trabajo
+          <p className="text-lg md:text-xl mb-6">
+          Bienvenido a mi portafolio, donde la ingeniería de software y la innovación se encuentran.
+Explora mis proyectos y descubre cómo transformo ideas en soluciones tecnológicas.
           </p>
+
 
           <Link
             href="/proyectos"
