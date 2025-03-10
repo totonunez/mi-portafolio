@@ -1,5 +1,17 @@
 [
-    "Sistema Blacket Manager: Rendimiento deportivo",
-    "Predicción de Enfermedades a partir de Datos Clínicos",
-    "Perfumes, diseño y evaluador de calidad"
+    {
+        "id": "1",
+        "titulo": "Aprender GraphQL",
+        "descripcion": "Implementar GraphQL en una API real."
+    },
+    {
+        "id": "2",
+        "titulo": "Optimizar Next.js",
+        "descripcion": "Mejorar el rendimiento de una aplicación con Next.js."
+    },
+    {
+        "id": "3",
+        "titulo": "WebSockets en tiempo real",
+        "descripcion": "Crear un chat en vivo con WebSockets."
+    }
 ]

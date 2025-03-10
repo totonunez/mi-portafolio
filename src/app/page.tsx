@@ -1,17 +1,30 @@
 "use client";
-import {  Button, Typography, Box, Grid} from "@mui/material";
+import {  Button, Typography, Box, Grid, Paper} from "@mui/material";
 import Link from "next/link";
 
 // Importamos el archivo JSON
-import industriasData from '../data/industrias.json';
+
 import blogsData from '../data/blogs.json';
 import futurosproyectosData from '../data/futurosproyectos.json';
+import CardProximosDesafios from "./components/CardProximosDesafios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSuitcaseMedical } from '@fortawesome/free-solid-svg-icons';
+import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
 
-const futurosProyectos = futurosproyectosData;
-const industrias = industriasData;
+const categories = [
+  { icon: faSuitcaseMedical, title: 'Salud' },
+  { icon: faPiggyBank, title: 'Finanzas' },
+  { icon: faGraduationCap, title: 'Educación' },
+  { icon: faShoppingCart, title: 'E-commerce' },
+  { icon: faCar, title: 'Automotriz' }
+];
+
 
 const blogPosts = blogsData;
-
+const desafios = futurosproyectosData;
 
 export default function Home() {
   return (
@@ -26,7 +39,7 @@ export default function Home() {
           </h1>
           <p className="text-lg md:text-xl mb-6">
           Bienvenido a mi portafolio, donde la ingeniería de software y la innovación se encuentran.
-Explora mis proyectos y descubre cómo transformo ideas en soluciones tecnológicas.
+          Explora mis proyectos y descubre cómo transformo ideas en soluciones tecnológicas.
           </p>
 
 
@@ -39,27 +52,31 @@ Explora mis proyectos y descubre cómo transformo ideas en soluciones tecnológi
         </div>
       </div>
       {/* Sección de Proyectos que se vienen */}
-      <Box my={5}>
-        <Typography variant="h4" textAlign="center" mb={3}>Proyectos que se vienen</Typography>
-        <ul>
-          {futurosProyectos.map((proyecto, index) => (
-            <li key={index}><Typography variant="body1">{proyecto}</Typography></li>
-          ))}
-        </ul>
-      </Box>
+      <main className="p-4">
 
-      {/* Sección de Industrias */}
-      <Box my={5}>
-        <Typography variant="h4" textAlign="center" mb={3}>Industrias donde se aplica la Ingeniería de Software</Typography>
-        <Grid container spacing={3} justifyContent="center">
-          {industrias.map((industria, index) => (
-            <Grid item key={index} xs={6} sm={4} md={2}>
-              <Typography variant="h6" textAlign="center">{industria}</Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+        <Box my={5}>
+              <div className="py-10">
+                <CardProximosDesafios desafios={desafios} />
+              </div>
+        </Box>
 
+        <Box my={5} textAlign="center">
+          <h2 className="text-4xl font-bold text-center text-[#1E3A8A] mb-6">
+            Industrias
+          </h2>
+          <Grid container spacing={3} justifyContent="center">
+            {categories.map((category, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4} lg={2}>
+                <Paper elevation={3} sx={{ p: 3, textAlign: 'center', borderRadius: 2 }}>
+                  <FontAwesomeIcon icon={category.icon} style={{ fontSize: '2rem', color: '#1E3A8A', marginBottom: '10px' }} />
+                  <Typography variant="h6">{category.title}</Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Sección de Blog */}
       {/* Sección de Blog */}
       <Box my={5}>
         <Typography variant="h3" textAlign="center" mb={3}>Para conocer más sobre las nuevas tecnologías</Typography>
@@ -75,6 +92,7 @@ Explora mis proyectos y descubre cómo transformo ideas en soluciones tecnológi
           ))}
         </ul>
       </Box>
+      </main>
     </div>
   );
 }
