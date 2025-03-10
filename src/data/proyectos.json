@@ -2,37 +2,37 @@
     {
         "id": "1",
         "nombre": "Unibag ERP",
-        "descripcion": "Este es un proyecto de ejemplo.",
+        "descripcion": "Este proyecto es un ERP (Enterprise Resource Planning) desarrollado en PHP con una base de datos MySQL, diseñado para optimizar la gestión empresarial. Permite administrar órdenes de compra, facturación, generación de estadísticas y la asignación de roles de administración con diferentes niveles de acceso. ",
         "imagenes": [
-            "/images/BlacketERFebrero.png",
-            "/images/BlacketERFebrero.png"
+            "/images/Unibag1.png",
+            "/images/Unibag2.png"
         ]
     },
     {
         "id": "2",
         "nombre": "Dashboard BI Unibag",
-        "descripcion": "Este es un proyecto de ejemplo.",
+        "descripcion": "Este proyecto de Business Intelligence (BI) utiliza Looker Studio para transformar datos empresariales en información clave para la toma de decisiones. Se conecta directamente a una base de datos para extraer, procesar y visualizar métricas fundamentales del negocio en tiempo real.",
         "imagenes": [
-            "/images/BlacketERFebrero.png",
-            "/images/BlacketERFebrero.png"
+            "/images/unibaglooker2.png"
         ]
     },
     {
         "id": "3",
-        "nombre": "Comoquiero Spa",
-        "descripcion": "Este es un proyecto de ejemplo.",
+        "nombre": "Comoquiero ",
+        "descripcion": "El proyecto de comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
         "imagenes": [
-            "/images/BlacketERFebrero.png",
-            "/images/BlacketERFebrero.png"
+            "/images/comoquiero1.png",
+            "/images/comoquiero2.png"
         ]
     },
     {
         "id": "4",
         "nombre": "Blogs Automáticos de Instagram",
-        "descripcion": "Otro proyecto de ejemplo.",
+        "descripcion": "El proyecto consistió en crear un blog con wordpress el cual capturara información de una API de instagram integrada con python en una máquina virtual de EC2. El blog fue programado completamente con php y se implementaron multiples mejoras de UX, UI",
         "imagenes": [
-            "/images/proyecto2-1.jpg",
-            "/images/proyecto2-2.jpg"
+            "/images/blogs1.png",
+            "/images/blogs2.png",
+            "/images/blogs3.png"
         ]
     }
 ]

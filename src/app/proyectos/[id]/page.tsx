@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image"; // ✅ Importar Image de Next.js
+import "./style.css";
 
 // Importamos el archivo JSON
 import proyectosData from "../../../data/proyectos.json";
@@ -26,34 +27,35 @@ export default function ProyectoPage() {
     }, [params]);
 
     return (
-        <div className="flex flex-col items-center justify-center text-center">
-            <div className="bg-white shadow-lg rounded-2xl p-8 max-w-xl w-full">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="content">
+            <div className="card">
+                <h2 className="title">
                     {proyectoNombre || "Cargando..."}
                 </h2>
             </div>
-            <p className="text-lg text-gray-700 leading-relaxed p-4">
+            <p className="description">
                 {proyectoDescripcion || "Cargando..."}
             </p>
 
-            <div className="flex flex-col items-center gap-4 p-4">
-            {proyectoImagenes?.length ? (
-                proyectoImagenes.map((imagen, index) => (
-                <div key={index} className="relative w-150 h-100">
-                    <Image
-                    src={imagen}
-                    alt={`Imagen ${index + 1} de ${proyectoNombre}`}
-                    layout="fill" // ✅ Mantiene la proporción
-                    objectFit="fill"
-                    className="rounded-lg shadow-lg"
-                    />
-                </div>
-                ))
-            ) : (
-                <p>No hay imágenes disponibles.</p>
-            )}
+            <div className="images-container">
+                {proyectoImagenes?.length ? (
+                    proyectoImagenes.map((imagen, index) => (
+                        <div key={index} className="image-wrapper">
+                            <Image
+                                src={imagen}
+                                alt={`Imagen ${index + 1} de ${proyectoNombre}`}
+                                layout="fill"
+                                objectFit="fill"
+                                className="image"
+                            />
+                        </div>
+                    ))
+                ) : (
+                    <p>No hay imágenes disponibles.</p>
+                )}
             </div>
-
         </div>
+
+
     );
 }

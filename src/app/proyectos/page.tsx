@@ -6,7 +6,7 @@ import ProyectoCard from "../components/ProyectoCard";
 
 export default function ProyectosPage() {
     return (
-        <div>
+        <div className="p-3">
         <Typography variant="h4" gutterBottom align="center">
             Mis Proyectos
         </Typography>
