@@ -1,17 +1,17 @@
 [
     {
         "id": "1",
-        "titulo": "Aprender GraphQL",
-        "descripcion": "Implementar GraphQL en una API real."
+        "titulo": "Blacket Manager",
+        "descripcion": "Crear una aplicación que almacene la información de deportistas, en la que se pueda gestionar la información con respecto a rendimiento deportivo y asistencia"
     },
     {
         "id": "2",
-        "titulo": "Optimizar Next.js",
-        "descripcion": "Mejorar el rendimiento de una aplicación con Next.js."
+        "titulo": "Rendimiento y tendencias de notas olfativas en perfumes",
+        "descripcion": "El proyecto consiste en utilizar algoritmos de machine learning para clasificar una lista de perfumes, a través de sus notas olfativas y analizar la demanda según su precio y notas"
     },
     {
         "id": "3",
-        "titulo": "WebSockets en tiempo real",
-        "descripcion": "Crear un chat en vivo con WebSockets."
+        "titulo": "Diagnóstico Médico Automatizado",
+        "descripcion": "Crea un sistema backend que procese imágenes médicas (rayos X, resonancias, tomografías) con un modelo de ML para detectar anomalías (cáncer, fracturas, enfermedades pulmonares, etc.)."
     }
 ]

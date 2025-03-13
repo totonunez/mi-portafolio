@@ -34,5 +34,29 @@
             "/images/blogs2.png",
             "/images/blogs3.png"
         ]
+    },
+    {
+        "id": "5",
+        "nombre": "JRI Ingeniería",
+        "descripcion": "Implementación de un sistema automático de archivos Naviswork, el fin de este sistema era lograr generar una importación masiva de archivos a una aplicación interna y lograr integrar todos los archivos y documentar un proyecto",
+        "imagenes": [
+            "/images/jri.png"
+        ]
+    },
+    {
+        "id": "6",
+        "nombre": "Front Developer Firmex",
+        "descripcion": "Primera experiencia laboral como desarrollador utilizando tecnologías javascript como React, MaterialUI, CSS, HTML para implementar un landing board de la empresa firmex. El giro de la empresa consiste en generar documentación digital y almacenarla en cuentas personales para todo tipo de documento",
+        "imagenes": [
+            "/images/firmex.png"
+        ]
+    },
+    {
+        "id": "7",
+        "nombre": "Practica Profesional Codelco",
+        "descripcion": "El proyecto consistía en integrar el Ecosistema de Microsoft, como Azure para almacenamiento y procesamiento en la nube, en un dashboard de Power BI para la visualización de datos, generando reportes personalizados, garantizando una gestión eficiente y rápida accesibilidad de los residuos mineros.",
+        "imagenes": [
+            "/images/codelco.jpeg"
+        ]
     }
 ]
