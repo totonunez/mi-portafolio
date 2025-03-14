@@ -1,6 +1,5 @@
 // src/components/Contact.tsx
 'use client'
-import { Typography} from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -12,7 +11,9 @@ export default function Contact(){
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
-      <Typography variant="h4" textAlign="center" mb={3}>Información de contacto</Typography>
+      <h2 className="text-4xl font-bold text-center text-[#1E3A8A] mb-6">
+        Información de contacto
+      </h2>
       <ul style={{  
         listStyleType: 'none', 
         padding: 0, 
