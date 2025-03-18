@@ -6,8 +6,18 @@ import Container from "./components/Container";
 import Footerr from "./components/Footer";
 import Head from "next/head";
 import Script from 'next/script';
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname(); // Reemplaza useRouter() con usePathname()
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", "G-SXNWCZEJVT", { page_path: pathname });
+    }
+  }, [pathname]);
   return (
     <html lang="es">
       
