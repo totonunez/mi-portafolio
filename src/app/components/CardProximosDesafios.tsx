@@ -12,7 +12,7 @@ interface Desafio {
     return (
       <div className="w-full px-4">
         <h2 className="text-4xl font-bold text-center text-[#1E3A8A] mb-6">
-          Próximos Desafíos
+          Próximos desafíos
         </h2>
         <div className="space-y-4">
           {desafios.map((desafio) => (

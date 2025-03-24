@@ -35,7 +35,7 @@ export default function Home() {
         {/* Contenido */}
         <div className="relative z-10 px-6" style={{ color: "#000080" }}>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          !Helloo! Soy Cristóbal Núñez Vera
+          Soy Cristóbal Núñez Vera
           </h1>
           <p className="text-lg md:text-xl mb-6">
           Bienvenido a mi portafolio, donde la ingeniería de software y la innovación se encuentran.
