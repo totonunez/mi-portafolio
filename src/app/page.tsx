@@ -80,7 +80,7 @@ export default function Home() {
       {/* Sección de Blog */}
       <Box my={5}>
         <Typography variant="h3" textAlign="center" mb={3}>Para conocer más sobre las nuevas tecnologías</Typography>
-        <Typography variant="h6" textAlign="center" mb={2}> Te invito a leer algún de nuestros artículos</Typography>
+        <Typography variant="h6" textAlign="center" mb={2}> Te invito a leer algún de nuestros artículos recomendados</Typography>
         
         <ul>
           {blogPosts.map((post, index) => (
