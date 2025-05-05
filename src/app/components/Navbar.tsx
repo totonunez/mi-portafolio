@@ -9,7 +9,7 @@ export default function Navbar() {
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Box sx={{ display: "flex", gap: 3 }}>
             <Button color="inherit" component={Link} href="/">Inicio</Button>
-            <Button color="inherit" component={Link} href="/proyectos">Mis Proyectos</Button>
+            <Button color="inherit" component={Link} href="/proyectos">Proyectos</Button>
             <Button color="inherit" component={Link} href="/contacto">Contacto</Button>
           </Box>
         </Container>
