@@ -1,19 +1,34 @@
-import { AppBar, Toolbar, Box, Button, Container } from "@mui/material";
+// components/Navbar.tsx
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#0D47A1" }}> {/* Azul oscuro */}
-      <Toolbar>
-        {/* Contenedor centrado con los botones */}
-        <Container sx={{ display: "flex", justifyContent: "center" }}>
-          <Box sx={{ display: "flex", gap: 3 }}>
-            <Button color="inherit" component={Link} href="/">Inicio</Button>
-            <Button color="inherit" component={Link} href="/proyectos">Proyectos</Button>
-            <Button color="inherit" component={Link} href="/contacto">Contacto</Button>
-          </Box>
-        </Container>
-      </Toolbar>
-    </AppBar>
+    <nav className="bg-[#1b3e63] text-white py-4 px-6 flex justify-between items-center">
+      <div className="flex items-center space-x-2">
+        <span className="font-bold text-lg">CN</span>
+      </div>
+      <ul className="flex space-x-8 text-sm font-medium">
+        <li>
+          <Link href="#inicio" className="hover:underline text-[#f8e8c9]">
+            Inicio
+          </Link>
+        </li>
+        <li>
+          <Link href="#proyectos" className="hover:underline text-[#f8e8c9]">
+            Proyectos
+          </Link>
+        </li>
+        <li>
+          <Link href="#sobre-mi" className="hover:underline text-[#f8e8c9]">
+            Sobre mí
+          </Link>
+        </li>
+        <li>
+          <Link href="#contacto" className="hover:underline text-[#f8e8c9]">
+            Contacto
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }

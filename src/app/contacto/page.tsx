@@ -1,46 +1,52 @@
-// src/components/Contact.tsx
-'use client'
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
-
-export default function Contact(){
-
+export default function Contact() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
+    <div
+      style={{
+        padding: "20px",
+        fontFamily: "Arial, sans-serif",
+        textAlign: "center",
+      }}
+    >
       <h2 className="text-4xl font-bold text-center text-[#1E3A8A] mb-6">
         Información de contacto
       </h2>
-      <ul style={{  
-        listStyleType: 'none', 
-        padding: 0, 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        gap: '15px' // Espaciado entre botones
-      }}>
+      <ul
+        style={{
+          listStyleType: "none",
+          padding: 0,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "15px", // Espaciado entre botones
+        }}
+      >
         <li>
           <a
             href="https://www.linkedin.com/in/cristobalnunezvera/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '200px',
-              padding: '12px',
-              fontSize: '18px',
-              backgroundColor: '#0077B5',
-              color: 'white',
-              textDecoration: 'none',
-              borderRadius: '8px'
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "200px",
+              padding: "12px",
+              fontSize: "18px",
+              backgroundColor: "#0077B5",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: "8px",
             }}
           >
-            <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 mr-2" />Linkedin
+            <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 mr-2" />
+            Linkedin
           </a>
         </li>
         <li>
@@ -49,56 +55,63 @@ export default function Contact(){
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '200px',
-              padding: '12px',
-              fontSize: '18px',
-              backgroundColor: '#333',
-              color: 'white',
-              textDecoration: 'none',
-              borderRadius: '8px'
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "200px",
+              padding: "12px",
+              fontSize: "18px",
+              backgroundColor: "#333",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: "8px",
             }}
           >
-            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 mr-2" />Github
+            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 mr-2" />
+            Github
           </a>
         </li>
         <li>
-          <a href="mailto:cristobalnunezvera@gmail.com" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '200px',
-            padding: '12px',
-            fontSize: '18px',
-            backgroundColor: '#333',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: '8px'
-          }}>
-            <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6 mr-2" />Correo
+          <a
+            href="mailto:cristobalnunezvera@gmail.com"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "200px",
+              padding: "12px",
+              fontSize: "18px",
+              backgroundColor: "#333",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: "8px",
+            }}
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6 mr-2" />
+            Correo
           </a>
         </li>
         <li>
-          <a href="tel:+56990369590" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '200px',
-            padding: '12px',
-            fontSize: '18px',
-            backgroundColor: '#333',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: '8px'
-          }}>
-            <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-2" />Celular
+          <a
+            href="tel:+56990369590"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "200px",
+              padding: "12px",
+              fontSize: "18px",
+              backgroundColor: "#333",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: "8px",
+            }}
+          >
+            <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-2" />
+            Celular
           </a>
         </li>
       </ul>
     </div>
-
   );
 }
-

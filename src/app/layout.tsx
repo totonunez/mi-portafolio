@@ -2,15 +2,17 @@
 
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Container from "./components/Container";
 import Footerr from "./components/Footer";
 import Head from "next/head";
-import Script from 'next/script';
+import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const pathname = usePathname(); // Reemplaza useRouter() con usePathname()
 
   useEffect(() => {
@@ -20,14 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }, [pathname]);
   return (
     <html lang="es">
-      
       <Head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />  
+        />
       </Head>
-      
+
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-SXNWCZEJVT"
@@ -60,22 +61,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }}
       />
       <body className="min-h-screen flex flex-col">
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5NTC9M5F"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        ></iframe>
-      </noscript>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5NTC9M5F"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <Navbar />
-        <main className="flex-1">
-          
-          <Container>{children}</Container>
-        </main>
+        <main className="flex-1">{children}</main>
         <Footerr />
       </body>
-
     </html>
   );
 }
