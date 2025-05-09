@@ -1,8 +1,8 @@
 [
     {
         "id": "1",
-        "titulo": "Sistema de administración de edificios residenciales",
-        "descripcion": " El objetivo del proyecto es crear un aplicativo que se encargue de gestionar la información principal de lo que conlleva la administración de edificiones residenciales, ya sea : los gastos comunes, reclamos, multas, deudas etc"
+        "titulo": "Aplicación de Reportes Financieros para Ejecutivos",
+        "descripcion": " Autenticación con roles (usuario, ejecutivo, administrador). Dashboards con KPIs financieros (morosidad, préstamos activos, etc.). Generación de PDFs o Excel con JasperReports o Apache POI."
     },
     {
         "id": "2",
@@ -13,10 +13,5 @@
         "id": "3",
         "titulo": "Rendimiento y tendencias de notas olfativas en perfumes",
         "descripcion": "El proyecto consiste en utilizar algoritmos de machine learning para clasificar una lista de perfumes, a través de sus notas olfativas y analizar la demanda según su precio y notas"
-    },
-    {
-        "id": "4",
-        "titulo": "Diagnóstico Médico Automatizado",
-        "descripcion": "Crea un sistema backend que procese imágenes médicas (rayos X, resonancias, tomografías) con un modelo de ML para detectar anomalías (cáncer, fracturas, enfermedades pulmonares, etc.)."
     }
 ]
