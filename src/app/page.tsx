@@ -9,6 +9,7 @@ import futurosproyectosData from "../data/futurosproyectos.json";
 import CardProximosDesafios from "./components/CardProximosDesafios";
 import HeroSection from "./components/HeroSection";
 import ProjectsSection from "./components/ProyectosSection";
+import SobreMi from "./components/SobreMi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcaseMedical } from "@fortawesome/free-solid-svg-icons";
 import { faPiggyBank } from "@fortawesome/free-solid-svg-icons";
@@ -30,9 +31,16 @@ const desafios = futurosproyectosData;
 export default function Home() {
   return (
     <div>
-      <HeroSection></HeroSection>
-      {/* Sección de Proyectos que se vienen */}
-      <ProjectsSection />
+      <section id="inicio">
+        <HeroSection></HeroSection>
+      </section>
+
+      <section id="proyectos">
+        <ProjectsSection />
+      </section>
+      <section id="sobre-mi">
+        <SobreMi />
+      </section>
 
       <Box my={5}>
         <div className="py-10">

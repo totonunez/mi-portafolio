@@ -23,7 +23,7 @@ const projects = [
       "Este proyecto es un ERP (Enterprise Resource Planning) desarrollado en PHP con una base de datos MySQL, diseñado para optimizar la gestión empresarial. Permite administrar órdenes de compra, facturación, generación de estadísticas y la asignación de roles de administración con diferentes niveles de acceso. ",
     tech: ["NextJS", "React", "Tailwind"],
     imagenes: ["/images/Unibag1.png", "/images/Unibag3.png"],
-    icon: <LaptopMacIcon sx={{ fontSize: 50 }} />,
+    icon: <LaptopMacIcon sx={{ fontSize: 50, color: "white" }} />,
     bgColor: "#1b3e63",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
       "Este proyecto de Business Intelligence (BI) utiliza Looker Studio para transformar datos empresariales en información clave para la toma de decisiones. Se conecta directamente a una base de datos para extraer, procesar y visualizar métricas fundamentales del negocio en tiempo real.",
     tech: ["React", "Redux", "Stripe"],
     imagenes: ["/images/unibaglooker2.png"],
-    icon: <StorefrontIcon sx={{ fontSize: 50 }} />,
+    icon: <StorefrontIcon sx={{ fontSize: 50, color: "white" }} />,
     bgColor: "#885A2D",
   },
   {
@@ -43,7 +43,7 @@ const projects = [
       "El proyecto de comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
     tech: ["React Native", "Firebase", "Expo"],
     imagenes: ["/images/comoquiero1.png", "/images/comoquiero2.png"],
-    icon: <SmartphoneIcon sx={{ fontSize: 50 }} />,
+    icon: <SmartphoneIcon sx={{ fontSize: 50, color: "white" }} />,
     bgColor: "#1c1c1c",
   },
 ];
@@ -53,10 +53,11 @@ export default function ProjectsSection() {
     <Box sx={{ backgroundColor: "#f9eddc", py: 8 }}>
       <Container>
         <Typography
-          variant="h4"
+          variant="h3"
           align="center"
           color="#1b3e63"
           fontWeight="bold"
+          sx={{ fontFamily: '"Times New Roman", Times, serif' }}
           gutterBottom
         >
           Mis Proyectos
@@ -92,7 +93,7 @@ export default function ProjectsSection() {
                     sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}
                   >
                     {project.tech.map((tech, i) => (
-                      <Chip key={i} label={tech} variant="outlined" />
+                      <Chip key={i} label={tech} color="primary" />
                     ))}
                   </Box>
                 </CardContent>

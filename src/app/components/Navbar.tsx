@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#1b3e63] text-white py-4 px-6 flex justify-between items-center">
+    <nav className=" sticky top-0 z-50 bg-[#1b3e63] text-white py-4 px-6 flex justify-between items-center">
       <div className="flex items-center space-x-2">
         <span className="font-bold text-lg">CN</span>
       </div>
       <ul className="flex space-x-8 text-sm font-medium">
         <li>
-          <Link href="#inicio" className="hover:underline text-[#f8e8c9]">
+          <Link href="/" className="hover:underline text-[#f8e8c9]">
             Inicio
           </Link>
         </li>
