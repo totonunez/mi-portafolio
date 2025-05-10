@@ -10,7 +10,7 @@ export default function HeroSection() {
             Cristóbal Núñez Vera
           </h1>
           <h2 className="text-xl md:text-2xl mt-4 text-[#f8e8c9]">
-            Desarrollador Frontend & Diseñador de Experiencias Digitales
+            Software Engineer & Backend Developer
           </h2>
           <p className="text-md md:text-lg mt-6 max-w-xl  text-[#e5f0ff]">
             Creando experiencias web únicas con un enfoque en diseño intuitivo y
@@ -24,9 +24,12 @@ export default function HeroSection() {
           >
             Ver proyectos
           </Link>
-          <button className="border border-white hover:bg-white hover:text-[#1e4776] text-white font-semibold py-2 px-6 rounded-xl transition-all">
+          <a
+            href="mailto:cristobalnunezvera@icloud.com"
+            className="border border-white hover:bg-white hover:text-[#1e4776] text-white font-semibold py-2 px-6 rounded-xl transition-all"
+          >
             Contactar
-          </button>
+          </a>
         </div>
       </div>
       <div className="overflow-hidden">

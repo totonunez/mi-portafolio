@@ -8,7 +8,7 @@ import {
   Paper,
   Avatar,
 } from "@mui/material";
-import { blueGrey, amber } from "@mui/material/colors";
+import { amber } from "@mui/material/colors";
 import ReactIcon from "@/data/icons/react.svg"; // Asegúrate de importar correctamente tus íconos
 import PHPIcon from "@/data/icons/php.svg";
 import NodeIcon from "@/data/icons/nodejs.svg";
@@ -29,6 +29,8 @@ export default function SobreMi() {
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={4} textAlign="center">
             <Avatar
+              src="/images/sobremi.png"
+              alt="Foto de perfil"
               sx={{
                 width: 150,
                 height: 150,
@@ -36,11 +38,7 @@ export default function SobreMi() {
                 bgcolor: amber[100],
                 border: "4px solid #8C6239",
               }}
-            >
-              <Typography variant="h2" color="#0b3556">
-                👤
-              </Typography>
-            </Avatar>
+            />
           </Grid>
 
           <Grid item xs={12} md={8}>
@@ -94,12 +92,14 @@ export default function SobreMi() {
                       color: "#fff",
                     }}
                   >
-                    <Image
-                      src={tech.icon}
-                      alt={tech.name}
-                      width={50}
-                      height={50}
-                    />
+                    <Box sx={{ display: "flex", justifyContent: "center" }}>
+                      <Image
+                        src={tech.icon}
+                        alt={tech.name}
+                        width={50}
+                        height={50}
+                      />
+                    </Box>
                     <Typography variant="subtitle1" mt={1}>
                       {tech.name}
                     </Typography>
@@ -110,13 +110,14 @@ export default function SobreMi() {
 
             <Button
               variant="contained"
+              href="mailto:cristobalnunezvera@icloud.com"
               sx={{
                 mt: 4,
                 backgroundColor: "#8C6239",
                 "&:hover": { backgroundColor: "#A67C52" },
               }}
             >
-              Contáctame
+              Contáctame por correo
             </Button>
           </Grid>
         </Grid>

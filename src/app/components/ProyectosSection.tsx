@@ -7,46 +7,30 @@ import {
   Card,
   CardContent,
   CardActions,
-  Button,
-  CardMedia,
 } from "@mui/material";
 import Link from "next/link";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
+import InsightsIcon from "@mui/icons-material/Insights";
+import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
+import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
+import { ArrowForwardIos } from "@mui/icons-material";
+import proyectos from "../../data/proyectos.json";
+import type { ReactElement } from "react";
 
-const projects = [
-  {
-    id: "1",
-    title: "Unibag ERP",
-    description:
-      "Este proyecto es un ERP (Enterprise Resource Planning) desarrollado en PHP con una base de datos MySQL, diseñado para optimizar la gestión empresarial. Permite administrar órdenes de compra, facturación, generación de estadísticas y la asignación de roles de administración con diferentes niveles de acceso. ",
-    tech: ["NextJS", "React", "Tailwind"],
-    imagenes: ["/images/Unibag1.png", "/images/Unibag3.png"],
-    icon: <LaptopMacIcon sx={{ fontSize: 50, color: "white" }} />,
-    bgColor: "#1b3e63",
-  },
-  {
-    id: "2",
-    title: "Dashboard BI Unibag",
-    description:
-      "Este proyecto de Business Intelligence (BI) utiliza Looker Studio para transformar datos empresariales en información clave para la toma de decisiones. Se conecta directamente a una base de datos para extraer, procesar y visualizar métricas fundamentales del negocio en tiempo real.",
-    tech: ["React", "Redux", "Stripe"],
-    imagenes: ["/images/unibaglooker2.png"],
-    icon: <StorefrontIcon sx={{ fontSize: 50, color: "white" }} />,
-    bgColor: "#885A2D",
-  },
-  {
-    id: "3",
-    title: "Comoquiero",
-    description:
-      "El proyecto de comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
-    tech: ["React Native", "Firebase", "Expo"],
-    imagenes: ["/images/comoquiero1.png", "/images/comoquiero2.png"],
-    icon: <SmartphoneIcon sx={{ fontSize: 50, color: "white" }} />,
-    bgColor: "#1c1c1c",
-  },
-];
+const iconMap: { [key: string]: ReactElement } = {
+  LaptopMacIcon: <LaptopMacIcon sx={{ fontSize: 50, color: "white" }} />,
+  StorefrontIcon: <StorefrontIcon sx={{ fontSize: 50, color: "white" }} />,
+  SmartphoneIcon: <SmartphoneIcon sx={{ fontSize: 50, color: "white" }} />,
+  InsightsIcon: <InsightsIcon sx={{ fontSize: 50, color: "white" }} />,
+  QuestionAnswerIcon: (
+    <QuestionAnswerIcon sx={{ fontSize: 50, color: "white" }} />
+  ),
+  LocalMoviesIcon: <LocalMoviesIcon sx={{ fontSize: 50, color: "white" }} />,
+};
+
+const projects = proyectos;
 
 export default function ProjectsSection() {
   return (
@@ -79,7 +63,7 @@ export default function ProjectsSection() {
                     alignItems: "center",
                   }}
                 >
-                  {project.icon}
+                  {newFunction(project)}
                 </Box>
                 <CardContent>
                   <Typography variant="h6" fontWeight="bold" gutterBottom>
@@ -98,7 +82,21 @@ export default function ProjectsSection() {
                   </Box>
                 </CardContent>
                 <CardActions sx={{ px: 2, pb: 2 }}>
-                  <Link href={`/proyectos/${project.id}`}>Ver detalles</Link>
+                  <Link
+                    href={`/proyectos/${project.id}`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 6,
+                      fontSize: 18,
+                      color: "#8e5e1c", // Café mostaza
+                      fontWeight: 800,
+                      textDecoration: "none",
+                    }}
+                  >
+                    Ver detalles{" "}
+                    <ArrowForwardIos sx={{ fontSize: 18, color: "#8C6239" }} />
+                  </Link>
                 </CardActions>
               </Card>
             </Grid>
@@ -107,4 +105,16 @@ export default function ProjectsSection() {
       </Container>
     </Box>
   );
+
+  function newFunction(project: {
+    id: string;
+    title: string;
+    description: string;
+    tech: string[];
+    icon: string;
+    bgColor: string;
+    imagenes: string[];
+  }) {
+    return iconMap[project.icon];
+  }
 }
