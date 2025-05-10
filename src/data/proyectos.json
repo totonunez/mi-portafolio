@@ -1,8 +1,15 @@
 [
     {
         "id": "1",
-        "nombre": "Unibag ERP",
-        "descripcion": "Este proyecto es un ERP (Enterprise Resource Planning) desarrollado en PHP con una base de datos MySQL, diseñado para optimizar la gestión empresarial. Permite administrar órdenes de compra, facturación, generación de estadísticas y la asignación de roles de administración con diferentes niveles de acceso. ",
+        "title": "Unibag ERP",
+        "description": "Este proyecto es un ERP (Enterprise Resource Planning) desarrollado en PHP con una base de datos MySQL, diseñado para optimizar la gestión empresarial. Permite administrar órdenes de compra, facturación, generación de estadísticas y la asignación de roles de administración con diferentes niveles de acceso. ",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "LaptopMacIcon",
+        "bgColor": "#1b3e63",
         "imagenes": [
             "/images/Unibag1.png",
             "/images/Unibag3.png"
@@ -10,16 +17,30 @@
     },
     {
         "id": "2",
-        "nombre": "Dashboard BI Unibag",
-        "descripcion": "Este proyecto de Business Intelligence (BI) utiliza Looker Studio para transformar datos empresariales en información clave para la toma de decisiones. Se conecta directamente a una base de datos para extraer, procesar y visualizar métricas fundamentales del negocio en tiempo real.",
+        "title": "Dashboard BI Unibag",
+        "description": "Este proyecto de Business Intelligence (BI) utiliza Looker Studio para transformar datos empresariales en información clave para la toma de decisiones. Se conecta directamente a una base de datos para extraer, procesar y visualizar métricas fundamentales del negocio en tiempo real.",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "StorefrontIcon",
+        "bgColor": "#8e5e1c",
         "imagenes": [
             "/images/unibaglooker2.png"
         ]
     },
     {
         "id": "3",
-        "nombre": "Comoquiero ",
-        "descripcion": "El proyecto de comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
+        "title": "Comoquiero ",
+        "description": "El proyecto de comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "SmartphoneIcon",
+        "bgColor": "#262a2d",
         "imagenes": [
             "/images/comoquiero1.png",
             "/images/comoquiero2.png"
@@ -27,8 +48,15 @@
     },
     {
         "id": "4",
-        "nombre": "Blogs Automáticos de Instagram",
-        "descripcion": "El proyecto consistió en crear un blog con wordpress el cual capturara información de una API de instagram integrada con python en una máquina virtual de EC2. El blog fue programado completamente con php y se implementaron multiples mejoras de UX, UI",
+        "title": "Blogs Automáticos de Instagram",
+        "description": "El proyecto consistió en crear un blog con wordpress el cual capturara información de una API de instagram integrada con python en una máquina virtual de EC2. El blog fue programado completamente con php y se implementaron multiples mejoras de UX, UI",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "InsightsIcon",
+        "bgColor": "#1b3e63",
         "imagenes": [
             "/images/blogs1.png",
             "/images/blogs2.png",
@@ -37,24 +65,45 @@
     },
     {
         "id": "5",
-        "nombre": "JRI Ingeniería",
-        "descripcion": "Implementación de un sistema automático de archivos Naviswork, el fin de este sistema era lograr generar una importación masiva de archivos a una aplicación interna y lograr integrar todos los archivos y documentar un proyecto",
+        "title": "JRI Ingeniería",
+        "description": "Implementación de un sistema automático de archivos Naviswork, el fin de este sistema era lograr generar una importación masiva de archivos a una aplicación interna y lograr integrar todos los archivos y documentar un proyecto",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "QuestionAnswerIcon",
+        "bgColor": "#8e5e1c",
         "imagenes": [
             "/images/jri.png"
         ]
     },
     {
         "id": "6",
-        "nombre": "Front Developer Firmex",
-        "descripcion": "Primera experiencia laboral como desarrollador utilizando tecnologías javascript como React, MaterialUI, CSS, HTML para implementar un landing board de la empresa firmex. El giro de la empresa consiste en generar documentación digital y almacenarla en cuentas personales para todo tipo de documento",
+        "title": "Front Developer Firmex",
+        "description": "Primera experiencia laboral como desarrollador utilizando tecnologías javascript como React, MaterialUI, CSS, HTML para implementar un landing board de la empresa firmex. El giro de la empresa consiste en generar documentación digital y almacenarla en cuentas personales para todo tipo de documento",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "LocalMoviesIcon",
+        "bgColor": "#262a2d",
         "imagenes": [
             "/images/firmex.png"
         ]
     },
     {
         "id": "7",
-        "nombre": "Practica Profesional Codelco",
-        "descripcion": "El proyecto consistía en integrar el Ecosistema de Microsoft, como Azure para almacenamiento y procesamiento en la nube, en un dashboard de Power BI para la visualización de datos, generando reportes personalizados, garantizando una gestión eficiente y rápida accesibilidad de los residuos mineros.",
+        "title": "Practica Profesional Codelco",
+        "description": "El proyecto consistía en integrar el Ecosistema de Microsoft, como Azure para almacenamiento y procesamiento en la nube, en un dashboard de Power BI para la visualización de datos, generando reportes personalizados, garantizando una gestión eficiente y rápida accesibilidad de los residuos mineros.",
+        "tech": [
+            "NextJS",
+            "React",
+            "Tailwind"
+        ],
+        "icon": "LaptopMacIcon",
+        "bgColor": "#1b3e63",
         "imagenes": [
             "/images/codelco.jpeg"
         ]
