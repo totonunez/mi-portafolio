@@ -23,11 +23,6 @@ export default function Navbar() {
             Sobre mí
           </Link>
         </li>
-        <li>
-          <Link href="#contacto" className="hover:underline text-[#f8e8c9]">
-            Contacto
-          </Link>
-        </li>
       </ul>
     </nav>
   );

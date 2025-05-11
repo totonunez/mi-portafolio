@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-6 py-24">
         <div className="mb-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white">
-            Cristóbal Núñez Vera
+            Cristóbal Eduardo Núñez Vera
           </h1>
           <h2 className="text-xl md:text-2xl mt-4 text-[#f8e8c9]">
             Software Engineer & Backend Developer

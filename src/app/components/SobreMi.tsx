@@ -59,10 +59,13 @@ export default function SobreMi() {
               }}
               paragraph
             >
-              Soy Cristóbal Núñez Vera, desarrollador frontend especializado en
-              crear experiencias web atractivas y funcionales. Con más de 5 años
-              de experiencia en el desarrollo web, me apasiona combinar diseño y
-              tecnología para crear soluciones digitales innovadoras.
+              Soy un ingeniero de software con sólida experiencia en desarrollo
+              backend, especializado en frameworks como Laravel y NestJS, y con
+              un dominio avanzado de lenguajes de programación como Python,
+              JavaScript y PHP. Aunque mi enfoque principal ha sido el backend,
+              también cuento con experiencia en el desarrollo frontend
+              utilizando tecnologías como React y Vue, lo que me permite
+              colaborar eficazmente en equipos full stack.
             </Typography>
             <Typography
               sx={{
@@ -70,9 +73,12 @@ export default function SobreMi() {
               }}
               paragraph
             >
-              Mi enfoque se centra en la creación de interfaces intuitivas y
-              responsivas, utilizando las últimas tecnologías como React, NextJS
-              y herramientas modernas de desarrollo frontend.
+              Tengo conocimientos robustos en Machine Learning, aplicando
+              diversas librerías especializadas como Scikit-learn, TensorFlow y
+              Pandas para proyectos de análisis predictivo y automatización
+              inteligente. Además, poseo experiencia en la implementación de
+              soluciones sobre plataformas Cloud, integrando servicios para
+              asegurar escalabilidad, seguridad y eficiencia operativa.
             </Typography>
 
             <Grid container spacing={2} mt={2}>

@@ -27,15 +27,15 @@ export default function Footer() {
               sx={{ fontFamily: '"Times New Roman", Times, serif' }}
               className="text-white font-bold"
             >
-              Cristóbal Núñez Vera
+              Cristóbal Eduardo Núñez Vera
             </Typography>
             <Typography variant="subtitle1" className="text-gray-400 mt-2">
-              Ingeniero de Software | Desarrollador FullStack
+              Software Engineer & Backend Developer
             </Typography>
           </Grid>
 
           {/* Columna Derecha: Íconos Sociales */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} sx={{ mb: 2 }}>
             <Stack
               direction="row"
               spacing={2}
@@ -87,11 +87,12 @@ export default function Footer() {
           {/* Columna Izquierda: Nombre y Descripción */}
           <Grid item xs={12} md={6}>
             <Typography variant="body2" className="text-gray-400 ">
-              © 2025 Cristóbal Núñez Vera. Todos los derechos reservados.
+              © 2025 Cristóbal Eduardo Núñez Vera. Todos los derechos
+              reservados.
             </Typography>
           </Grid>
 
-          <Grid xs={12} md={6}>
+          <Grid item xs={12} md={6}>
             <Stack
               direction="row"
               spacing={2}
