@@ -84,9 +84,9 @@ export default function SobreMi() {
             <Grid container spacing={2} mt={2}>
               {[
                 { name: "React", icon: ReactIcon },
-                { name: "JavaScript", icon: PHPIcon },
+                { name: "PHP", icon: PHPIcon },
                 { name: "Node.js", icon: NodeIcon },
-                { name: "Figma", icon: PostgresIcon },
+                { name: "Postgresql", icon: PostgresIcon },
               ].map((tech) => (
                 <Grid item xs={6} md={3} key={tech.name}>
                   <Paper

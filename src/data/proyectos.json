@@ -33,7 +33,7 @@
     {
         "id": "3",
         "title": "Comoquiero ",
-        "description": "El proyecto de comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
+        "description": "El proyecto de Comoquiero se diversificó en la aplicación de planificación de menus y recetas, que es un proyecto desarrollado en Vue.js y NEST y en el desarrollo de la landing page de la empresa matriz (Qcart), la cual fue implementada con tecnologías de desarrollo web ( HTML, CSS y Javascript) levantada en infraestructura AWS.",
         "tech": [
             "NextJS",
             "VueJs",
@@ -49,7 +49,7 @@
     {
         "id": "4",
         "title": "Blogs Automáticos de Instagram",
-        "description": "El proyecto consistió en crear un blog con wordpress el cual capturara información de una API de instagram integrada con python en una máquina virtual de EC2. El blog fue programado completamente con php y se implementaron multiples mejoras de UX, UI",
+        "description": "El proyecto consistió en crear un Blog con Wordpress el cual capturara información de una API de instagram integrada con python en una máquina virtual de EC2. El blog fue programado completamente con Php y se implementaron multiples mejoras de UX, UI",
         "tech": [
             "AWS",
             "PHP",
@@ -81,7 +81,7 @@
     {
         "id": "6",
         "title": "Front Developer Firmex",
-        "description": "Primera experiencia laboral como desarrollador utilizando tecnologías javascript como React, MaterialUI, CSS, HTML para implementar un landing board de la empresa firmex. El giro de la empresa consiste en generar documentación digital y almacenarla en cuentas personales para todo tipo de documento",
+        "description": "Primera experiencia laboral como desarrollador utilizando tecnologías Javascript como React, MaterialUI, CSS, HTML para implementar un landing board de la empresa firmex. El giro de la empresa consiste en generar documentación digital y almacenarla en cuentas personales para todo tipo de documento",
         "tech": [
             "Laravel",
             "React",
