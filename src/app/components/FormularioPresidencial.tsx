@@ -30,7 +30,12 @@ export default function FormularioCiudadano() {
 
   // ✅ 3. Usa el tipo también en la función
   const onSubmit = async (data: FormularioCiudadanoData) => {
-    const res = await fetch("http://localhost:4000/api/form", {
+    const baseUrl =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:4000"
+        : "https://atreusocean.com";
+
+    const res = await fetch(`${baseUrl}/api/form`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
