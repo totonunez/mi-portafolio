@@ -12,10 +12,24 @@ import {
   Select,
 } from "@mui/material";
 
-export default function FormularioCiudadano() {
-  const { register, handleSubmit, reset } = useForm();
+// ✅ 1. Define el tipo del formulario
+type FormularioCiudadanoData = {
+  edad: number;
+  genero: string;
+  educacion: string;
+  estadoCivil: string;
+  hijos: number;
+  religion: string;
+  ocupacion: string;
+  tipoContrato: string;
+};
 
-  const onSubmit = async (data: any) => {
+export default function FormularioCiudadano() {
+  // ✅ 2. Usa el tipo en useForm
+  const { register, handleSubmit, reset } = useForm<FormularioCiudadanoData>();
+
+  // ✅ 3. Usa el tipo también en la función
+  const onSubmit = async (data: FormularioCiudadanoData) => {
     const res = await fetch("http://localhost:4000/api/form", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -51,7 +65,7 @@ export default function FormularioCiudadano() {
           type="number"
           fullWidth
           margin="normal"
-          {...register("edad")}
+          {...register("edad", { valueAsNumber: true })}
         />
 
         <FormControl fullWidth margin="normal">
@@ -70,11 +84,11 @@ export default function FormularioCiudadano() {
             {...register("educacion")}
             label="Nivel Educacional"
           >
-            <MenuItem value="basica">Educacion Básica</MenuItem>
-            <MenuItem value="media">Educacion Media</MenuItem>
-            <MenuItem value="superior">Educacion Superior Incompleta</MenuItem>
+            <MenuItem value="basica">Educación Básica</MenuItem>
+            <MenuItem value="media">Educación Media</MenuItem>
+            <MenuItem value="superior">Educación Superior Incompleta</MenuItem>
             <MenuItem value="superiorcompleta">Título Profesional</MenuItem>
-            <MenuItem value="magister">Magister</MenuItem>
+            <MenuItem value="magister">Magíster</MenuItem>
             <MenuItem value="doctorado">Doctorado</MenuItem>
           </Select>
         </FormControl>
@@ -89,8 +103,8 @@ export default function FormularioCiudadano() {
             <MenuItem value="soltero">Soltero</MenuItem>
             <MenuItem value="casado">Casado</MenuItem>
             <MenuItem value="conviviente">Conviviente</MenuItem>
-            <MenuItem value="Divorsiado">Divorsiado</MenuItem>
-            <MenuItem value="unioncivil">Union Civil</MenuItem>
+            <MenuItem value="divorciado">Divorciado</MenuItem>
+            <MenuItem value="unioncivil">Unión Civil</MenuItem>
             <MenuItem value="viudo">Viudo</MenuItem>
           </Select>
         </FormControl>
@@ -100,7 +114,7 @@ export default function FormularioCiudadano() {
           type="number"
           fullWidth
           margin="normal"
-          {...register("hijos")}
+          {...register("hijos", { valueAsNumber: true })}
         />
 
         <FormControl fullWidth margin="normal">
