@@ -5,7 +5,7 @@ const router = express.Router();
 const { PrismaClient } = require('../generated/prisma'); // ← AJUSTADO A TU OUTPUT
 const prisma = new PrismaClient();
 
-router.post('/', async (req, res) => {
+router.post('/form', async (req, res) => {
   try {
     const {
         edad,
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
         tipoContrato,
       },
     });
-    res.json({ message: 'Datos guardados con éxito', data });
+    res.status(200).json({ mensaje: 'Formulario recibido' });
   } catch (error) {
     console.error('Error al guardar:', error);
     res.status(500).json({ error: 'Error al guardar los datos' });

@@ -43,6 +43,7 @@ export default function FormularioCiudadano() {
 
     if (res.ok) {
       alert("Datos guardados correctamente");
+      console.log("Datos enviados:", data);
       reset();
     } else {
       alert("Error al guardar");
