@@ -10,6 +10,16 @@ router.get('/camino', async (req, res) => {
   res.send('Hola a todos los caminos desde el backend');
 });
 
+router.post('/testpost', async (req, res) => {
+  try {
+    // Aquí puedes realizar alguna operación con los datos recibidos
+    res.status(200).json({ mensaje: 'Datos recibidos correctamente'});
+  } catch (error) {
+    res.status(500).json({ error: 'Error al procesar la solicitud' });
+  }
+}
+);
+
 router.post('/form', async (req, res) => {
   try {
     console.log('Datos recibidos:', req.body);
