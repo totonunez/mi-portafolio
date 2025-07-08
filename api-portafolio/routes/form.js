@@ -5,6 +5,11 @@ const router = express.Router();
 const { PrismaClient } = require('../generated/prisma'); // ← AJUSTADO A TU OUTPUT
 const prisma = new PrismaClient();
 
+// Ruta principal
+router.get('/camino', async (req, res) => {
+  res.send('Hola a todos los caminos desde el backend');
+});
+
 router.post('/form', async (req, res) => {
   try {
     const {
@@ -30,7 +35,7 @@ router.post('/form', async (req, res) => {
         tipoContrato,
       },
     });
-    res.status(200).json({ mensaje: 'Formulario recibido' });
+    res.status(200).json({ mensaje: 'Formulario recibido', data });
   } catch (error) {
     console.error('Error al guardar:', error);
     res.status(500).json({ error: 'Error al guardar los datos' });
