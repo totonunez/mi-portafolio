@@ -12,10 +12,10 @@ export default function LlamadaBackend() {
     try {
       const baseUrl =
         process.env.NODE_ENV === "development"
-          ? "http://localhost:4000"
-          : "http://atreusocean.com";
+          ? "https://localhost:4000"
+          : "https://atreusocean.com";
 
-      const res = await fetch(`${baseUrl}`);
+      const res = await fetch(`${baseUrl}/api`);
       const data = await res.text(); // porque es texto plano
       setMensaje(data);
     } catch (error) {

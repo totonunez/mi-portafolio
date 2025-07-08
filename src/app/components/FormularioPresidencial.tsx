@@ -32,8 +32,8 @@ export default function FormularioCiudadano() {
   const onSubmit = async (data: FormularioCiudadanoData) => {
     const baseUrl =
       process.env.NODE_ENV === "development"
-        ? "http://localhost:4000"
-        : "http://atreusocean.com";
+        ? "https://localhost:4000"
+        : "https://atreusocean.com";
 
     const res = await fetch(`${baseUrl}/api/form`, {
       method: "POST",
