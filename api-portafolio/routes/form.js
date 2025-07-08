@@ -12,6 +12,7 @@ router.get('/camino', async (req, res) => {
 
 router.post('/form', async (req, res) => {
   try {
+    console.log('Datos recibidos:', req.body);
     const {
         edad,
         genero,
@@ -37,7 +38,8 @@ router.post('/form', async (req, res) => {
     });
     res.status(200).json({ mensaje: 'Formulario recibido', data });
   } catch (error) {
-    console.error('Error al guardar:', error);
+    console.error('Error al guardar:', error.message);
+    console.error(error.stack);
     res.status(500).json({ error: 'Error al guardar los datos' });
   }
 });
