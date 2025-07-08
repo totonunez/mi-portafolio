@@ -15,6 +15,7 @@ export default function LlamadaBackend() {
       setMensaje(data);
     } catch (error) {
       setMensaje("Error al conectar con el backend");
+      console.error("Error al guardar:", error);
     } finally {
       setLoading(false);
     }

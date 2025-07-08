@@ -1,3 +1,4 @@
+"use client";
 import LlamadaBackend from "../components/LlamadaBackend";
 
 export default function Page() {
