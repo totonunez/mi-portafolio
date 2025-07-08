@@ -10,7 +10,12 @@ export default function LlamadaBackend() {
   const obtenerMensaje = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/");
+      const baseUrl =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:4000"
+          : "http://atreusocean.com";
+
+      const res = await fetch(`${baseUrl}`);
       const data = await res.text(); // porque es texto plano
       setMensaje(data);
     } catch (error) {
