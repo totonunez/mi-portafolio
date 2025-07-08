@@ -33,7 +33,7 @@ export default function FormularioCiudadano() {
     const baseUrl =
       process.env.NODE_ENV === "development"
         ? "http://localhost:4000"
-        : "https://atreusocean.com";
+        : "http://atreusocean.com";
 
     const res = await fetch(`${baseUrl}/api/form`, {
       method: "POST",
