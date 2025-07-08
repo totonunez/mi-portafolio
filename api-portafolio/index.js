@@ -2,13 +2,15 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-var corsOptions = {
-  origin: 'https://atreusocean.com',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
- 
+// Configurar CORS
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://atreusocean.com'], // Ajusta según tu entorno
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 
-app.use(cors(corsOptions));
+app.use(express.json());
+
 app.use(express.json());
 
 // Ruta principal

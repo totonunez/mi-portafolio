@@ -12,7 +12,7 @@ export default function LlamadaBackend() {
     try {
       const baseUrl =
         process.env.NODE_ENV === "development"
-          ? "https://localhost:4000"
+          ? "http://localhost:4000"
           : "https://atreusocean.com";
 
       const res = await fetch(`${baseUrl}/api`);
