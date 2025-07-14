@@ -24,26 +24,28 @@ router.post('/form', async (req, res) => {
   try {
     console.log('Datos recibidos:', req.body);
     const {
-        edad,
-        genero,
-        educacion,
-        estadoCivil,
-        hijos,
-        religion,
-        ocupacion,
-        tipoContrato,
-      } = req.body;
+      edad,
+      sexo,
+      educacion,
+      estadoCivil,
+      hijos,
+      religion,
+      ocupacion,
+      region,
+      comuna
+    } = req.body;
 
     const data = await prisma.ciudadano.create({
       data: {
         edad: parseInt(edad, 10),
-        genero,
+        sexo,
         educacion,
         estadoCivil,
         hijos: parseInt(hijos, 10),
         religion,
         ocupacion,
-        tipoContrato,
+        region,
+        comuna
       },
     });
     res.status(200).json({ mensaje: 'Formulario recibido', data });

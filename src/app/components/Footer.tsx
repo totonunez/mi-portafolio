@@ -10,7 +10,6 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function Footer() {
   return (
@@ -67,15 +66,6 @@ export default function Footer() {
                 sx={{ color: "white" }}
               >
                 <TwitterIcon />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="https://www.instagram.com/moonwake_cl/"
-                target="_blank"
-                rel="noopener"
-                sx={{ color: "white" }}
-              >
-                <InstagramIcon />
               </IconButton>
             </Stack>
           </Grid>

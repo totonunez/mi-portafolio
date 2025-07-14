@@ -15,13 +15,15 @@ import {
 // ✅ 1. Define el tipo del formulario
 type FormularioCiudadanoData = {
   edad: number;
-  genero: string;
+  sexo: string;
   educacion: string;
   estadoCivil: string;
   hijos: number;
   religion: string;
   ocupacion: string;
   tipoContrato: string;
+  region: string;
+  comuna: string;
 };
 
 export default function FormularioCiudadano() {
@@ -76,7 +78,7 @@ export default function FormularioCiudadano() {
 
         <FormControl fullWidth margin="normal">
           <InputLabel>Sexo / Género</InputLabel>
-          <Select defaultValue="" {...register("genero")} label="Sexo / Género">
+          <Select defaultValue="" {...register("sexo")} label="Sexo / Género">
             <MenuItem value="masculino">Masculino</MenuItem>
             <MenuItem value="femenino">Femenino</MenuItem>
             <MenuItem value="otro">Otro</MenuItem>
@@ -148,10 +150,16 @@ export default function FormularioCiudadano() {
           {...register("ocupacion")}
         />
         <TextField
-          label="Tipo de contrato / estabilidad"
+          label="Región"
           fullWidth
           margin="normal"
-          {...register("tipoContrato")}
+          {...register("region")}
+        />
+        <TextField
+          label="Comuna"
+          fullWidth
+          margin="normal"
+          {...register("comuna")}
         />
 
         <Button

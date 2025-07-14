@@ -11,18 +11,19 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
 }
 
 model Ciudadano {
   id             Int     @id @default(autoincrement())
   edad           Int
-  genero         String
+  sexo         String
   educacion      String
   estadoCivil    String
   hijos          Int
   religion       String
   ocupacion      String
-  tipoContrato   String
+  region         String
+  comuna         String
   creadoEn       DateTime @default(now())
 }
