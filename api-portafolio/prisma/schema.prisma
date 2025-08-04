@@ -1,29 +1,42 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// prisma/schema.prisma
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-generator client {
-  provider = "prisma-client-js"
-  output   = "../generated/prisma"
-}
-
+// Fuente de datos (SQLite)
 datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
 }
 
+// Generador de cliente
+generator client {
+  provider = "prisma-client-js"
+}
+
 model Ciudadano {
-  id             Int     @id @default(autoincrement())
-  edad           Int
+  id           Int           @id @default(autoincrement())
+  edad         Int
   sexo         String
-  educacion      String
-  estadoCivil    String
-  hijos          Int
-  religion       String
-  ocupacion      String
-  region         String
-  comuna         String
-  creadoEn       DateTime @default(now())
+  educacion    String
+  estadoCivil  String
+  hijos        Int
+  religion     String
+  ocupacion    String
+  region       String
+  comuna       String
+  creadoEn     DateTime       @default(now())
+  candidatoSugerido String?
+  preferencias Preferencias?
+}
+
+model Preferencias {
+  id               Int        @id @default(autoincrement())
+  seguridad        Int
+  estado           Int
+  aborto           Int
+  ffaa             Int
+  afp              Int
+  partidos         Int
+  justicia_social  Int
+  meritocracia     Int
+  ciudadanoId      Int        @unique
+  ciudadano        Ciudadano  @relation(fields: [ciudadanoId], references: [id])
 }

@@ -9,10 +9,6 @@ import {
   Avatar,
 } from "@mui/material";
 import { amber } from "@mui/material/colors";
-import ReactIcon from "@/data/icons/react.svg"; // Asegúrate de importar correctamente tus íconos
-import PHPIcon from "@/data/icons/php.svg";
-import NodeIcon from "@/data/icons/nodejs.svg";
-import PostgresIcon from "@/data/icons/postgresql.svg";
 import Image from "next/image";
 
 export default function SobreMi() {
@@ -83,10 +79,10 @@ export default function SobreMi() {
 
             <Grid container spacing={2} mt={2}>
               {[
-                { name: "React", icon: ReactIcon },
-                { name: "PHP", icon: PHPIcon },
-                { name: "Node.js", icon: NodeIcon },
-                { name: "Postgresql", icon: PostgresIcon },
+                { name: "React", icon: "/icons/react.svg" },
+                { name: "PHP", icon: "/icons/php.svg" },
+                { name: "Node.js", icon: "/icons/nodejs.svg" },
+                { name: "Postgresql", icon: "/icons/postgresql.svg" },
               ].map((tech) => (
                 <Grid item xs={6} md={3} key={tech.name}>
                   <Paper
