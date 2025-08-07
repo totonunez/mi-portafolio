@@ -10,7 +10,6 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
   useMediaQuery,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -188,35 +187,52 @@ const FormularioPresidencial = ({
             variant="h5"
             component="h2"
             sx={{ fontFamily: '"Times New Roman", Times, serif' }}
-            className="text-white font-bold"
+            className="text-black font-bold"
           >
             Según tus respuestas, tu candidato sugerido es:
           </Typography>
-          <Typography
-            variant="h4"
-            color="#234966"
-            fontWeight="bold"
-            sx={{ mt: 1, textAlign: "center" }}
-          >
-            {candidatoSugerido ?? "Cargando..."}
-          </Typography>
-        </DialogContent>
 
-        <DialogActions>
-          <Button
-            onClick={handleReiniciar}
-            variant="contained"
+          <Box
             sx={{
-              fontFamily: '"Times New Roman", Times, serif',
-              backgroundColor: "#234966",
-              "&:hover": {
-                backgroundColor: "#082941", // un tono más oscuro en hover
-              },
+              minHeight: "70vh", // altura mínima para centrar en pantalla
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center", // centra el texto dentro de los componentes
+              px: 2, // padding horizontal responsivo
             }}
           >
-            Volver a hacer la encuesta
-          </Button>
-        </DialogActions>
+            <Typography
+              variant="h4"
+              color="#234966"
+              fontWeight="bold"
+              sx={{ mb: 2 }} // margen inferior para separar del botón
+            >
+              {candidatoSugerido ?? "Cargando..."}
+            </Typography>
+
+            <Button
+              onClick={handleReiniciar}
+              variant="contained"
+              sx={{
+                fontFamily: '"Times New Roman", Times, serif',
+                backgroundColor: "#234966",
+                "&:hover": {
+                  backgroundColor: "#082941",
+                },
+                textAlign: "center",
+                px: 3,
+                width: {
+                  xs: "100%",
+                  sm: "auto",
+                },
+              }}
+            >
+              Volver a hacer la encuesta
+            </Button>
+          </Box>
+        </DialogContent>
       </Dialog>
     </Box>
   );
