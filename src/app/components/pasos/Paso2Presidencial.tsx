@@ -99,7 +99,7 @@ const FormularioPresidencial = ({
       }}
     >
       <Typography variant="h5" gutterBottom>
-        Página 2: Preferencias políticas
+        Página 2: Preferencias de tendencia de ideas
       </Typography>
       <Typography variant="body2" gutterBottom>
         Califica del 1 (poca importancia o desacuerdo) al 10 (mucha importancia
@@ -196,7 +196,7 @@ const FormularioPresidencial = ({
             variant="h4"
             color="#234966"
             fontWeight="bold"
-            sx={{ mt: 1 }}
+            sx={{ mt: 1, textAlign: "center" }}
           >
             {candidatoSugerido ?? "Cargando..."}
           </Typography>
