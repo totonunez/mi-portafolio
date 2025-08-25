@@ -116,31 +116,43 @@ const FormularioPresidencial = ({
       ).map(([key, label]) => (
         <FormControl component="fieldset" fullWidth key={key} sx={{ mt: 3 }}>
           <FormLabel component="legend">{label}</FormLabel>
-          <RadioGroup
-            row
-            name={key}
-            value={formData[key]}
-            onChange={handleChangeRadio(key)}
+
+          {/* Contenedor con scroll horizontal en móviles */}
+          <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between", // distribuye los 10 círculos uniformemente
-              flexWrap: "nowrap", // evita que se rompa a la siguiente fila
-              mt: 1,
+              overflowX: "auto",
+              py: 1,
             }}
           >
-            {[...Array(10)].map((_, index) => (
-              <FormControlLabel
-                key={index + 1}
-                value={index + 1}
-                control={<Radio sx={{ color: "#234966" }} />}
-                label={index + 1}
-                labelPlacement="bottom"
-                sx={{ margin: 0 }} // quita margen extra
-              />
-            ))}
-          </RadioGroup>
+            <RadioGroup
+              row
+              name={key}
+              value={formData[key]}
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setFormData({ ...formData, [key]: Number(event.target.value) })
+              }
+              sx={{
+                display: "flex",
+                flexWrap: "nowrap", // evita que se rompa a otra línea
+                gap: 1, // separación entre radios
+              }}
+            >
+              {[...Array(10)].map((_, index) => (
+                <FormControlLabel
+                  key={index + 1}
+                  value={index + 1}
+                  control={<Radio sx={{ color: "#234966" }} />}
+                  label={index + 1}
+                  labelPlacement="bottom"
+                  sx={{ minWidth: 32 }} // asegura que cada radio tenga un ancho mínimo
+                />
+              ))}
+            </RadioGroup>
+          </Box>
         </FormControl>
       ))}
+
       <Box display="flex" justifyContent="space-between" mt={4}>
         <Button
           type="button"
