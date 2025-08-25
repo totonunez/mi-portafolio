@@ -109,9 +109,6 @@ export default function FormularioPresidencial() {
         <Paso2Presidencial
           onFinish={handlePasoFinal}
           datos={preferencias}
-          actualizar={(partial) =>
-            setPreferencias((prev) => ({ ...prev, ...partial }))
-          }
           pasoAnterior={() => setPaso(1)}
           onReiniciar={reiniciarEncuesta}
           candidatoSugerido={candidatoSugerido}

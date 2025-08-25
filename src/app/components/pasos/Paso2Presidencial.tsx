@@ -4,13 +4,15 @@ import {
   Box,
   Button,
   Typography,
-  Slider,
+  RadioGroup,
   FormControl,
   FormLabel,
   Dialog,
   DialogTitle,
   DialogContent,
   useMediaQuery,
+  FormControlLabel,
+  Radio,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
@@ -27,7 +29,6 @@ type PreferenciasPoliticas = {
 
 type Props = {
   datos: PreferenciasPoliticas;
-  actualizar: (datos: Partial<PreferenciasPoliticas>) => void;
   pasoAnterior: () => void;
   onFinish: (data: PreferenciasPoliticas) => void;
   onReiniciar: () => void;
@@ -36,7 +37,6 @@ type Props = {
 
 const FormularioPresidencial = ({
   datos,
-  actualizar,
   pasoAnterior,
   onFinish,
   onReiniciar,
@@ -54,15 +54,13 @@ const FormularioPresidencial = ({
     setFormData(datos);
   }, [datos]);
 
-  const handleChange =
-    (name: keyof PreferenciasPoliticas) =>
-    (_: Event, value: number | number[]) => {
-      const nuevoValor = value as number;
-      setFormData((prev) => ({
-        ...prev,
-        [name]: nuevoValor,
-      }));
-      actualizar({ [name]: nuevoValor });
+  const handleChangeRadio =
+    (key: keyof PreferenciasPoliticas) =>
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setFormData({
+        ...formData,
+        [key]: Number(event.target.value), // convertir a número
+      });
     };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -104,7 +102,6 @@ const FormularioPresidencial = ({
         Califica del 1 (poca importancia o desacuerdo) al 10 (mucha importancia
         o acuerdo):
       </Typography>
-
       {(
         Object.entries({
           seguridad: "Orden y seguridad pública",
@@ -117,31 +114,33 @@ const FormularioPresidencial = ({
           meritocracia: "Valor por la eficiencia, innovación y meritocracia",
         }) as [keyof PreferenciasPoliticas, string][]
       ).map(([key, label]) => (
-        <FormControl fullWidth key={key} sx={{ mt: 3 }}>
-          <FormLabel>{label}</FormLabel>
-          <Slider
+        <FormControl component="fieldset" fullWidth key={key} sx={{ mt: 3 }}>
+          <FormLabel component="legend">{label}</FormLabel>
+          <RadioGroup
+            row
             name={key}
             value={formData[key]}
-            onChange={handleChange(key)}
-            step={1}
-            marks
-            min={1}
-            max={10}
-            valueLabelDisplay="auto"
+            onChange={handleChangeRadio(key)}
             sx={{
-              color: "#234966",
-              fontFamily: '"Times New Roman", Times, serif',
-              "& .MuiSlider-markLabel": {
-                fontFamily: '"Times New Roman", Times, serif',
-              },
-              "& .MuiSlider-valueLabel": {
-                fontFamily: '"Times New Roman", Times, serif',
-              },
+              display: "flex",
+              justifyContent: "space-between", // distribuye los 10 círculos uniformemente
+              flexWrap: "nowrap", // evita que se rompa a la siguiente fila
+              mt: 1,
             }}
-          />
+          >
+            {[...Array(10)].map((_, index) => (
+              <FormControlLabel
+                key={index + 1}
+                value={index + 1}
+                control={<Radio sx={{ color: "#234966" }} />}
+                label={index + 1}
+                labelPlacement="bottom"
+                sx={{ margin: 0 }} // quita margen extra
+              />
+            ))}
+          </RadioGroup>
         </FormControl>
       ))}
-
       <Box display="flex" justifyContent="space-between" mt={4}>
         <Button
           type="button"

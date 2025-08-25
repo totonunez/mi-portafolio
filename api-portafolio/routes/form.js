@@ -12,8 +12,16 @@ const perfilesCandidatos = {
   "Jeannette Jara": { seguridad: 3, estado: 9, aborto: 9, ffaa: 3, afp: 2, partidos: 8, justicia_social: 9, meritocracia: 4 },
   "Marco Enriquez-Ominami": { seguridad: 5, estado: 7, aborto: 8, ffaa: 5, afp: 4, partidos: 6, justicia_social: 8, meritocracia: 5 },
   "Franco Parisi": { seguridad: 6, estado: 5, aborto: 5, ffaa: 6, afp: 6, partidos: 5, justicia_social: 5, meritocracia: 7 },
-  "Johannes Kaiser": { seguridad: 9, estado: 4, aborto: 2, ffaa: 9, afp: 8, partidos: 3, justicia_social: 3, meritocracia: 9 }
+  "Johannes Kaiser": { seguridad: 9, estado: 4, aborto: 2, ffaa: 9, afp: 8, partidos: 3, justicia_social: 3, meritocracia: 9 },
+
+  // Nuevo candidato: Eduardo Artés (marxista, estatista, anti-mercado, muy pro justicia social)
+  "Eduardo Artés": { seguridad: 2, estado: 10, aborto: 9, ffaa: 1, afp: 1, partidos: 9, justicia_social: 10, meritocracia: 2 },
+
+  // Nuevo candidato: Harold Minichols (médico, académico, perfil técnico moderado, 
+  // énfasis en meritocracia y salud pública, menos polarizado que el resto)
+  "Harold Minichols": { seguridad: 5, estado: 6, aborto: 6, ffaa: 4, afp: 5, partidos: 5, justicia_social: 7, meritocracia: 9 }
 };
+
 
 function calcularCandidato(preferenciasUsuario) {
   let mejorCandidato = null;

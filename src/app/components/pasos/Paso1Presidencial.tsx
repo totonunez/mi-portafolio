@@ -243,6 +243,7 @@ export default function Paso1Presidencial({ onNext }: Props) {
           >
             <MenuItem value="">Seleccionar...</MenuItem>
             <MenuItem value="ninguna">Ninguna</MenuItem>
+            <MenuItem value="agnostico">Agnostico</MenuItem>
             <MenuItem value="catolicismo">Catolicismo</MenuItem>
             <MenuItem value="cristianismo">Cristianismo</MenuItem>
             <MenuItem value="islam">Islam</MenuItem>
@@ -274,19 +275,43 @@ export default function Paso1Presidencial({ onNext }: Props) {
             })}
           >
             <MenuItem value="">Seleccionar...</MenuItem>
-            <MenuItem value="profesional_ti">Profesional de TI</MenuItem>
-            <MenuItem value="docente">Docente / Profesor</MenuItem>
-            <MenuItem value="salud">Profesional de la Salud</MenuItem>
-            <MenuItem value="administrativo">Empleado Administrativo</MenuItem>
-            <MenuItem value="comercio">Vendedor / Comercio</MenuItem>
-            <MenuItem value="agricultor">
-              Agricultor / Trabajador Agropecuario
+            <MenuItem value="comercial">Comercial, Ventas y Negocios</MenuItem>
+            <MenuItem value="logistica">Abastecimiento y Logística</MenuItem>
+            <MenuItem value="oficio">Oficios y Otros</MenuItem>
+            <MenuItem value="finanzas">
+              Administración, Contabilidad y Finanzas
             </MenuItem>
-            <MenuItem value="operario">Operario / Manufactura</MenuItem>
-            <MenuItem value="seguridad">Seguridad / Vigilancia</MenuItem>
-            <MenuItem value="estudiante">Estudiante</MenuItem>
-            <MenuItem value="jubilado">Jubilado</MenuItem>
-            <MenuItem value="otros">Otros</MenuItem>
+            <MenuItem value="salud">Salud, Medicina y Farmacia</MenuItem>
+            <MenuItem value="gastronomia">Gastronomía y Turismo</MenuItem>
+            <MenuItem value="instutuciones_publicas">
+              Comunicación, Relaciones Institucionales y Públicas
+            </MenuItem>
+            <MenuItem value="cliente">
+              Atención al Cliente, Call Center y Telemarketing
+            </MenuItem>
+            <MenuItem value="manufactura">Producción y Manufactura</MenuItem>
+            <MenuItem value="tecnologia">
+              Tecnología, Sistemas y Telecomunicaciones
+            </MenuItem>
+            <MenuItem value="recursos_humanos">
+              Recursos Humanos y Capacitación
+            </MenuItem>
+            <MenuItem value="ingenieria">Ingenierías</MenuItem>
+            <MenuItem value="minera">Minería, Petróleo y Gas</MenuItem>
+            <MenuItem value="educacion">
+              Educación, Docencia e Investigación
+            </MenuItem>
+            <MenuItem value="construccion">
+              Ingeniería Civil y Construcción
+            </MenuItem>
+            <MenuItem value="marketing">Marketing y Publicidad</MenuItem>
+            <MenuItem value="secretaria">Secretarias y Recepción</MenuItem>
+            <MenuItem value="seguro">Seguros</MenuItem>
+            <MenuItem value="aduana">Aduana y Comercio Exterior</MenuItem>
+            <MenuItem value="diseno">Diseño</MenuItem>
+            <MenuItem value="legales">Legales</MenuItem>
+            <MenuItem value="naviero">Naviero, Maritimo, Portuario</MenuItem>
+            <MenuItem value="sociologia">Sociología / Trabajo Social</MenuItem>
           </Select>
 
           {errors.ocupacion && (
