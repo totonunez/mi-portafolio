@@ -129,9 +129,7 @@ const FormularioPresidencial = ({
               row
               name={key}
               value={formData[key]}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                setFormData({ ...formData, [key]: Number(event.target.value) })
-              }
+              onChange={handleChangeRadio(key)}
               sx={{
                 display: "flex",
                 flexWrap: "nowrap", // evita que se rompa a otra línea
