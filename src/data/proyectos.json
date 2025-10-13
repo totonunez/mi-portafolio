@@ -1,4 +1,35 @@
-[
+[    {
+        "id": "9",
+        "title": "Mes de la Ciberseguridad Copec",
+        "description": "Por el mes de la ciberseguridad junto al equipo de Featuring se realizo una actividades para difundir la ciberseguridad en la empresa a través de capacitaciones con dinámicas de desarrollo web a los distintos funcionarios de Copec",
+        "tech": [
+            "Angular",
+            "Pocketbase",
+            "Tailwind"
+        ],
+        "icon": "StorefrontIcon",
+        "bgColor": "#8e5e1c",
+        "imagenes": [
+            "/images/copec1.jpeg",
+            "/images/copec2.jpeg"
+        ]
+    },
+    {
+        "id": "8",
+        "title": "Instalación Burgeon Fashions Park",
+        "description": "Proyecto de instalación de software ERP Burgeon a la tienda de retail Fashions Park en comenzando de la ciudad de Copiapo hasta la isla de Chiloé. La instalación consistió en conectar las APIs de la tienda con el software ERP Burgeon, para que el software pudiera gestionar las órdenes de compra, facturación, generación de estadísticas y la asignación de roles de administración con diferentes niveles de acceso. ",
+        "tech": [
+            "Linux",
+            "MySql",
+            "Java"
+        ],
+        "icon": "SmartphoneIcon",
+        "bgColor": "#262a2d",
+        "imagenes": [
+            "/images/fashionspark1.jpeg",
+            "/images/fashionspark2.jpeg"
+        ]
+    },
     {
         "id": "1",
         "title": "Unibag ERP",
